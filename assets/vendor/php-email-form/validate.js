@@ -57,7 +57,7 @@
     })
     .then(response => {
       if( response.ok ) {
-        return response.text()
+        return "Your message has been received, someone will contact you soon"
       } else {
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
@@ -78,7 +78,7 @@
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    thisForm.querySelector('.error-message').innerHTML = "Your message has been received, someone will contact you soon";
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 
